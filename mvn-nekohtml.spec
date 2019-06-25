@@ -4,7 +4,7 @@
 #
 Name     : mvn-nekohtml
 Version  : 1.9.6.2
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar
 Source0  : https://repo1.maven.org/maven2/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar
 Source1  : https://repo1.maven.org/maven2/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.pom
@@ -29,11 +29,11 @@ data components for the mvn-nekohtml package.
 %build
 
 %install
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/nekohtml/l/1.9.6.2
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/nekohtml/l/1.9.6.2
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/nekohtml/l/1.9.6.2
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/nekohtml/l/1.9.6.2
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2
 
 
 %files
@@ -41,5 +41,5 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/nekohtml/l/1.9.6.2
 
 %files data
 %defattr(-,root,root,-)
-/usr/share/java/.m2/repository/nekohtml/l/1.9.6.2/nekohtml-1.9.6.2.jar
-/usr/share/java/.m2/repository/nekohtml/l/1.9.6.2/nekohtml-1.9.6.2.pom
+/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar
+/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.pom
