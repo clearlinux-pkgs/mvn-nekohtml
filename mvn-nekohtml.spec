@@ -4,12 +4,16 @@
 #
 Name     : mvn-nekohtml
 Version  : 1.9.6.2
-Release  : 3
+Release  : 4
 URL      : https://repo1.maven.org/maven2/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar
 Source0  : https://repo1.maven.org/maven2/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar
-Source1  : https://repo1.maven.org/maven2/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.pom
-Source2  : https://repo1.maven.org/maven2/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.jar
-Source3  : https://repo1.maven.org/maven2/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.pom
+Source1  : https://repo.gradle.org/gradle/libs-releases/net/sourceforge/nekohtml/nekohtml/1.9.14/nekohtml-1.9.14.jar
+Source2  : https://repo.gradle.org/gradle/libs-releases/net/sourceforge/nekohtml/nekohtml/1.9.14/nekohtml-1.9.14.pom
+Source3  : https://repo.gradle.org/gradle/libs-releases/net/sourceforge/nekohtml/nekohtml/1.9.16/nekohtml-1.9.16.jar
+Source4  : https://repo.gradle.org/gradle/libs-releases/net/sourceforge/nekohtml/nekohtml/1.9.16/nekohtml-1.9.16.pom
+Source5  : https://repo1.maven.org/maven2/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.pom
+Source6  : https://repo1.maven.org/maven2/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.jar
+Source7  : https://repo1.maven.org/maven2/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -27,21 +31,34 @@ data components for the mvn-nekohtml package.
 
 
 %prep
+%setup -q -n META-INF
 
 %build
 
 %install
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2
-cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2
+cp %{SOURCE0} %{buildroot}/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.14
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.14/nekohtml-1.9.14.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.14
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.14/nekohtml-1.9.14.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.16
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.16/nekohtml-1.9.16.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.16
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.16/nekohtml-1.9.16.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.pom
 
 
 %files
@@ -51,5 +68,9 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/net/sourceforge/nekohtm
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar
 /usr/share/java/.m2/repository/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.pom
+/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.14/nekohtml-1.9.14.jar
+/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.14/nekohtml-1.9.14.pom
+/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.16/nekohtml-1.9.16.jar
+/usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.16/nekohtml-1.9.16.pom
 /usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.jar
 /usr/share/java/.m2/repository/net/sourceforge/nekohtml/nekohtml/1.9.22/nekohtml-1.9.22.pom
