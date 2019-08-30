@@ -4,7 +4,7 @@
 #
 Name     : mvn-nekohtml
 Version  : 1.9.6.2
-Release  : 4
+Release  : 5
 URL      : https://repo1.maven.org/maven2/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar
 Source0  : https://repo1.maven.org/maven2/nekohtml/nekohtml/1.9.6.2/nekohtml-1.9.6.2.jar
 Source1  : https://repo.gradle.org/gradle/libs-releases/net/sourceforge/nekohtml/nekohtml/1.9.14/nekohtml-1.9.14.jar
